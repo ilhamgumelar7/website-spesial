@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎉 Happy Birthday Maitsaa Alejandra 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Comic Neue', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffe0f0, #ffd1dc);
+      color: #4a154b;
+      overflow-x: hidden;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px 60px;
+      background-color: #fff0f6;
+      overflow: hidden;
+    }
+    header h1 {
+      font-family: 'Schoolbell', cursive;
+      font-size: 3em;
+      color: #e91e63;
+      animation: bounce 2s infinite;
+    }
+    header h2 {
+      font-size: 1.5em;
+      color: #a3155a;
+      margin-top: 15px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #ff69b4;
+      opacity: 0.8;
+      transform-origin: center;
+      animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+    .gallery img {
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.1) rotate(-2deg);
+      filter: brightness(1.1);
+    }
+
+    .message {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      background: #ffe6f9;
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+      text-align: center;
+    }
+    .message p {
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 1.2em;
+    }
+    .message p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #fff0f6;
+      color: #a3155a;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5em; }
+      header h2 { font-size: 1.2em; }
+      .gallery img { width: 90%; }
+      .message { font-size: 1.05em; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="confetti" id="confetti"></div>
+    <h1>🎂 Happy Birthday! 🎂</h1>
+    <h2>Untuk Anak Muda Paling Spesial 💖</h2>
+  </header>
+
+  <section class="gallery">
+    <img src="ICHA1.jpeg" alt="Foto Icha 1">
+    <img src="ICHA2.jpeg" alt="Foto Icha 2">
+    <img src="ICHA3.jpeg" alt="Foto Icha 3">
+    <img src="icha39.jpeg" alt="Foto Icha 4">
+  </section>
+
+  <section class="message">
+    <p>
+      Dear <strong>anak muda tersayang</strong>,<br><br>
+      “Selamat ulang tahun! Semoga setiap langkahmu makin pasti, setiap harapan makin dekat, dan setiap doa dijawab dengan indah. Semoga di tahun barumu kau dipenuhi kebahagiaan, kedamaian, dan keberkahan yang bertambah setiap hari.”
+    </p>
+    <p>
+      “Aku nggak hadir untuk membuka luka lama… tapi untuk mengingatkan bahwa dulu kita pernah saling menyembuhkan. Kalau ada sedikit rasa tersisa, maukah kita coba lagi, tapi lebih dewasa, lebih sabar, dan lebih tulus?”
+    </p>
+    <p>
+      🎈 happy birthday and i love u 🎈<br>
+      Selamat, maaf, dan terima kasih 💐💝
+    </p>
+    <button style="text-decoration: none; background-color: #e91e63;width: 100px; padding: 10px; border-radius: 9px; border: none; margin-top: 20px; cursor: pointer; font-weight: bold; color: #ffff;"><a href="index2.html" style="text-decoration: none;color: #ffff;">klik</a></button>
+  </section>
+
+  <footer>
+    &copy; 27 Oktober 2025 | Dari anak tua ke anak muda ✨
+  </footer>
+
+  <script>
+    // Buat confetti pieces secara acak
+    const confettiContainer = document.getElementById('confetti');
+    const colors = ['#ff69b4', '#ff1493', '#ffb6c1', '#ffc0cb'];
+
+    function createConfettiPiece() {
+      const piece = document.createElement('div');
+      piece.classList.add('confetti-piece');
+      piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.left = Math.random() * window.innerWidth + 'px';
+      piece.style.animationDuration = (2 + Math.random() * 2) + 's';
+      piece.style.width = piece.style.height = (5 + Math.random() * 6) + 'px';
+      confettiContainer.appendChild(piece);
+
+      // Hapus ketika tidak terlihat
+      setTimeout(() => {
+        piece.remove();
+      }, 4000);
+    }
+
+    // Spawn beberapa confetti secara berkala
+    setInterval(createConfettiPiece, 150);
+
+  </script>
+</body>
+</html>
